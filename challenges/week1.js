@@ -1,25 +1,27 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
-  //return word[0].toUpperCase() + word.slice (1);
+  return word[0].toUpperCase() + word.slice (1);
 //from Stackoverflow, answers to 
 //How do I make the first letter of a string uppercase in JavaScript?
-  String.prototype.capitalize = function() {
-  return this.charAt(0).toUpperCase() + this.slice(1);
+  //String.prototype.capitalize = function() {
+  //return this.charAt(0).toUpperCase() + this.slice(1);
     }  //this might work better
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
-  return generateInitials (firstName;0
+  return generateInitials (firstName(0).lastName(0));
 }
 
 function addVAT(originalPrice, vatRate) {
-  if (originalPrice === undefined) throw new Error("originalPrice is requied");
+  if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
+  return originalPrice/100 * vatRate + originalPrice;
 }
+
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
