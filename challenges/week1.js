@@ -22,7 +22,7 @@ function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
-  return originalPrice/100 * vatRate + originalPrice;
+  return (originalPrice/100 * vatRate) + originalPrice;
 }
 
 
@@ -30,7 +30,7 @@ function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   // Add your code here!
-  return originalPrice -reduction(originalPrice/100 * reduction);
+  return originalPrice - (originalPrice/100 * reduction);
 }
 
 function getMiddleCharacter(str) {
@@ -56,11 +56,11 @@ function getMiddleCharacter(str) {
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
-    let reversed = "";
+    let reverse = "";
     for(let char of word){
-      reversed = char + reversed;
+      reverse = char + reverse;
     }
-    return reversed;
+    return reverse;
   
 }
 
@@ -70,9 +70,11 @@ function reverseAllWords(words) {
 
 }
 
+
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // Add your code here!
+  //return users = "Linux"
 }
 
 function getMeanScore(scores) {
@@ -88,7 +90,44 @@ return total / scores.length;
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
+  var str="",x,y,a;
+for (a=1;a<=100;a++)
+{
+    x = a%3 ==0;
+    y = a%5 ==0;
+    if(x)
+    {
+        str+="fizz"
+    }
+    if (y)
+    {
+        str+="buzz"
+    }
+    if (!(x||y))
+    {
+        str+=a;
+    }
+    str+="\n"
+    return str;
 }
+       /*for(var i = 1;i <= n; i++) {
+         if (i % 3 === 0 && i % 5 === 0) {
+           return "fizzbuzz";
+         }
+         else if(i % 3 === 0){
+           return "fizz";
+         }
+         else if(i % 5 === 0) {
+           return "buzz";
+         }
+         else {
+           return (+1);
+         }
+       
+       }*/
+    }
+
+
 
 module.exports = {
   capitalize,
