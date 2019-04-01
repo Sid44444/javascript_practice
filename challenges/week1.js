@@ -2,28 +2,34 @@ function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
   return word[0].toUpperCase() + word.slice (1);
-//from Stackoverflow, answers to 
-//How do I make the first letter of a string uppercase in JavaScript?
-  //String.prototype.capitalize = function() {
-  //return this.charAt(0).toUpperCase() + this.slice(1);
-    }  //this might work better
+//from Stackoverflow
+  
+    }  
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
-  
-//return firstName[0]+lastName[0].substring(0, 1).toUpperCase();
-      
-}
+// each parameter to be treated the same
+  //Upper case in position 0
+ return firstName[0].toUpperCase() +'.'+ lastName[0].toUpperCase();
+}//your video helped me alot on this one, thank you.
 
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
-  return (originalPrice/100 * vatRate) + originalPrice;
+  return ((originalPrice/100) * vatRate) + originalPrice;
+  
 }
+//round to decimal place
+ //function _round(num, dec) {
+    //return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+//}
+//let num = 1.23456;
+
+//alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
 
 
 function getSalePrice(originalPrice, reduction) {
@@ -56,19 +62,49 @@ function getMiddleCharacter(str) {
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
-    let reverse = "";
-    for(let char of word){
-      reverse = char + reverse;
-    }
-    return reverse;
-  
+  //function reverseString(str) {
+    // Step 1. Use the split() method to return a new array
+    var splitString = word.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+ 
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    //Step 4. Return the reversed string
+    return joinArray; // "olleh"
 }
+ 
+
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Add your code here!
+ 
+  //function reverseString(str) {
+    // Step 1. Use the split() method to return a new array
+    var splitString = words.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+ 
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    //Step 4. Return the reversed string
+    return joinArray; // "olleh"
+    //Original Array 
+  
+} 
 
-}
+
 
 
 function countLinuxUsers(users) {
@@ -90,43 +126,9 @@ return total / scores.length;
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
-  var str="",x,y,a;
-for (a=1;a<=100;a++)
-{
-    x = a%3 ==0;
-    y = a%5 ==0;
-    if(x)
-    {
-        str+="fizz"
-    }
-    if (y)
-    {
-        str+="buzz"
-    }
-    if (!(x||y))
-    {
-        str+=a;
-    }
-    str+="\n"
-    return str;
+  
 }
-       /*for(var i = 1;i <= n; i++) {
-         if (i % 3 === 0 && i % 5 === 0) {
-           return "fizzbuzz";
-         }
-         else if(i % 3 === 0){
-           return "fizz";
-         }
-         else if(i % 5 === 0) {
-           return "buzz";
-         }
-         else {
-           return (+1);
-         }
-       
-       }*/
-    }
-
+  
 
 
 module.exports = {
