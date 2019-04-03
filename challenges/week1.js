@@ -3,7 +3,6 @@ function capitalize(word) {
   // Add your code here!
   return word[0].toUpperCase() + word.slice (1);
 //from Stackoverflow
-  
     }  
 
 function generateInitials(firstName, lastName) {
@@ -13,23 +12,18 @@ function generateInitials(firstName, lastName) {
 // each parameter to be treated the same
   //Upper case in position 0
  return firstName[0].toUpperCase() +'.'+ lastName[0].toUpperCase();
-}//your video helped me alot on this one, thank you.
+}
 
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
-  return ((originalPrice/100) * vatRate) + originalPrice;
+  return (originalPrice/100 * vatRate) + originalPrice (Math.round);
+ 
   
 }
-//round to decimal place
- //function _round(num, dec) {
-    //return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
-//}
-//let num = 1.23456;
 
-//alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
 
 
 function getSalePrice(originalPrice, reduction) {
@@ -111,14 +105,27 @@ function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // Add your code here!
   //return users = "Linux"
+  let total = 0;
+
+users.forEach(function (user) {
+  const compType = user.type;
+  if (compType === "Linux") {
+    total += 1;   
+  }
+});
+ 
+  return total;
 }
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
+  //sum of all elements / number of elements
   var total = 0;
-for(var i = 0; i < scores.length; i++) {
-    total += scores[i];
+  Array.prototype=''
+  Array.prototype.avg = Array.prototype.avg || function () {
+    return this.sum()/this.length .toFixed(2); 
+     
 }
 return total / scores.length;
 }
