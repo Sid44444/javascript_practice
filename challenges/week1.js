@@ -19,7 +19,7 @@ function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
-  return (originalPrice/100 * vatRate) + originalPrice (Math.round);
+  return (originalPrice/100 * vatRate) + originalPrice;
  
   
 }
@@ -121,13 +121,16 @@ function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
   //sum of all elements / number of elements
-  var total = 0;
-  Array.prototype=''
-  Array.prototype.avg = Array.prototype.avg || function () {
-    return this.sum()/this.length .toFixed(2); 
-     
-}
-return total / scores.length;
+  const reducer = (total,currentValue) =>total + currentValue;
+  const sum = scores.reduce(reducer);
+  return Math.round(100 *(sum/scores.length))/100;
+  //I watched a video on this that explained it brilliantly 
+  //(https://www.youtube.com/watch?v=uibEcNmGCi8)
+  //The rounding numbers down to 2 decimal places caused me problems.
+  //I used .toFixed(2) but this converted my number to a string
+  // causing both tests to fail. 
+
+
 }
 
 function simpleFizzBuzz(n) {

@@ -138,7 +138,7 @@ describe("getMeanScore", () => {
   });
 });
 
-describe.only("simpleFizzBuzz", () => {
+describe("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
   });
