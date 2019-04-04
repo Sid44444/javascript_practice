@@ -64,7 +64,7 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 50 by 0%", () => {
-    expect(getSalePrice(50, 0)).toBe(0);
+    expect(getSalePrice(50, 0)).toBe(50);
   });
 });
 
