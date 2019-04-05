@@ -3,18 +3,27 @@ function getFillings(sandwich) {
   // Your code here!
   // finds fillings: array 
   //lists all contents still in array format
-  
   return sandwich.fillings;
 }
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
+  if (person.city === "Manchester") {
+    return true;
+  } else {
+    return false;
+  }
 }
+  
+
 
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
   // Your code here!
+  const num = (people/40);
+  const roundedNum =Math.ceil(num);
+  return roundedNum;
 }
 
 function countSheep(arr) {
