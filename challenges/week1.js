@@ -107,7 +107,7 @@ function countLinuxUsers(users) {
   //return users = "Linux"
   let total = 0;
 
-users.forEach(function (user) {
+  users.forEach(function (user) {
   const compType = user.type;
   if (compType === "Linux") {
     total += 1;   

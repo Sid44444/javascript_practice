@@ -16,8 +16,6 @@ function isFromManchester(person) {
   }
 }
   
-
-
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
   // Your code here!
@@ -29,11 +27,34 @@ function getBusNumbers(people) {
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
   // Your code here!
+  const sheepOnly = arr.filter(function(item) {
+    if (item === "sheep") {
+      return true;
+    } else {
+      return false;
+    } 
+  }) 
+  return sheepOnly.length
+
+  // let count = 0;
+  // for(var i = 0; i < arr.length; ++i){
+  //     if(arr[i] === "sheep") {
+  //         count++;
+  
+  //   }
+  // }
+  // return count
 }
+  
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
+  //const cityFinder=person.city
+  //if person:city='Manchester' {
+   // return true;
+//}// else {
+  //return false;
 }
 
 module.exports = {
