@@ -79,69 +79,69 @@ function reverseWord(word) {
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Add your code here!
-    const reverseAllWords = words.map(function(item) {
-      return item.split('').reverse().join('');
-    });
-    return reverseAllWords;
-  }
-
-
-  function countLinuxUsers(users) {
-    if (users === undefined) throw new Error("users is required");
-    // Add your code here!
-    //return users = "Linux"
-  let total = 0;
-   users.forEach(function (user) {
-      const compType = user.type;
-      if (compType === "Linux") {
-        total += 1;
-      }
-    });
-
-    return total;
-  }
-
-  function getMeanScore(scores) {
-    if (scores === undefined) throw new Error("scores is required");
-    // Add your code here!
-    //sum of all elements / number of elements
-    const reducer = (total, currentValue) => total + currentValue;
-    const sum = scores.reduce(reducer);
-    return Math.round(100 * (sum / scores.length)) / 100;
-    //I watched a video on this that explained it brilliantly 
-    //(https://www.youtube.com/watch?v=uibEcNmGCi8)
-    //The rounding numbers down to 2 decimal places caused me problems.
-    //I used .toFixed(2) but this converted my number to a string
-    // causing both tests to fail. 
+  const reverseAllWords = words.map(function (item) {// put a function in a function
+    return item.split('').reverse().join('');//each word in array, split into digits, reversed, joined and function returned
+  });
+  return reverseAllWords;
 }
 
-  function simpleFizzBuzz(n) {
-    if (n === undefined) throw new Error("n is required");
-    // Add your code here!
-    // if divisible by 3 and 5 say fizzbuzz
-    if (n % 3 === 0 && n % 5 === 0) {
-      return 'fizzbuzz';
-    } else if (n % 3 === 0) {
-      return "fizz";
-    } else if (n % 5 === 0) {
-      return 'buzz';
-    } else {
-      return n;
+
+function countLinuxUsers(users) {
+  if (users === undefined) throw new Error("users is required");
+  // Add your code here!
+  //return users = "Linux"
+  let total = 0;
+  users.forEach(function (user) {
+    const compType = user.type;
+    if (compType === "Linux") {
+      total += 1;
     }
+  });
 
+  return total;
+}
+
+function getMeanScore(scores) {
+  if (scores === undefined) throw new Error("scores is required");
+  // Add your code here!
+  //sum of all elements / number of elements
+  const reducer = (total, currentValue) => total + currentValue;
+  const sum = scores.reduce(reducer);
+  return Math.round(100 * (sum / scores.length)) / 100;
+  //I watched a video on this that explained it brilliantly 
+  //(https://www.youtube.com/watch?v=uibEcNmGCi8)
+  //The rounding numbers down to 2 decimal places caused me problems.
+  //I used .toFixed(2) but this converted my number to a string
+  // causing both tests to fail. 
+}
+
+function simpleFizzBuzz(n) {
+  if (n === undefined) throw new Error("n is required");
+  // Add your code here!
+  // if divisible by 3 and 5 say fizzbuzz
+  if (n % 3 === 0 && n % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (n % 3 === 0) {
+    return "fizz";
+  } else if (n % 5 === 0) {
+    return 'buzz';
+  } else {
+    return n;
   }
 
+}
 
 
-  module.exports = {
-    capitalize,
-    generateInitials,
-    addVAT,
-    getSalePrice,
-    getMiddleCharacter,
-    reverseWord,
-    reverseAllWords,
-    countLinuxUsers,
-    getMeanScore,
-    simpleFizzBuzz
-  }
+
+module.exports = {
+  capitalize,
+  generateInitials,
+  addVAT,
+  getSalePrice,
+  getMiddleCharacter,
+  reverseWord,
+  reverseAllWords,
+  countLinuxUsers,
+  getMeanScore,
+  simpleFizzBuzz
+}
