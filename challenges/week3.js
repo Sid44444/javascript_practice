@@ -1,11 +1,19 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here!
+  // function isEmpty(obj) {
+  //   for (var key in obj) {
+  //     if obj.hasOwnProperty(key))
+  //       return false;
+  //   }
+  //   return true;
+  // }
+  // if true {
+    var array1 = [];
+    const map1 = array1.map(x => x * x);
+    return map1;
+  }
 
-  var array1 = [];
-  const map1 = array1.map(x => x * x);
-  return map1;
-}
 
 
 function camelCaseWords(words) {
