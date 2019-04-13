@@ -36,14 +36,6 @@ function countSheep(arr) {
   }) 
   return sheepOnly.length
 
-  // let count = 0;
-  // for(var i = 0; i < arr.length; ++i){
-  //     if(arr[i] === "sheep") {
-  //         count++;
-  
-  //   }
-  // }
-  // return count
 }
   
 
@@ -52,12 +44,17 @@ function hasMPostCode(person) {
   // Your code here!
 if (person === 'Manchester') {
     return true;
-} if(person !== 'Manchester') {
+} if (person !== 'Manchester') {
     return false;
-  
+} 
+let postCodeFirst =(person('postCode'.charAt(0))); 
+
+ if (postCodeFirst === 'M') { 
+  return true;
+} if (postCodeFirst !== 'M') {
+  return false;
 }
 }
- 
   //const cityFinder=person.city
   //if person:city='Manchester' {
    // return true;
