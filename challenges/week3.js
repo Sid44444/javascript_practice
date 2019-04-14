@@ -6,14 +6,14 @@ function getSquares(nums) {
   const squaredNums = nums.map(function (num) {
     return num * num;
   })
-return squaredNums;
+  return squaredNums;
 }
-  
-  
-  // Your code here!
-  // get each number in nums
-  // times the number by itself
-  //put the number into a new array
+
+
+// Your code here!
+// get each number in nums
+// times the number by itself
+//put the number into a new array
 // const squaredNums = [];
 //   //return the array of squared numbers
 //   nums.forEach(function (num) { // num name used istead of item
@@ -41,11 +41,11 @@ function camelCaseWords(words) {
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   // Your code here!
-// let count =0;
-// function forEach (people,{name ,subjects}){
-//   count = count + 1;
-// }
-//return count;
+  // let count =0;
+  // function forEach (people,{name ,subjects}){
+  //   count = count + 1;
+  // }
+  //return count;
 }
 
 
@@ -55,14 +55,14 @@ function checkIngredients(menu, ingredient) {
   // Your code here!
   let foundFoodItem = false;
 
-  menu.forEach(function(menuItem) {
-    menuItem.ingredient.forEach(function(menuItemIngredient) {
+  menu.forEach(function (menuItem) {
+    menuItem.ingredients.forEach(function (menuItemIngredient) {
       if (menuItemIngredient === ingredient) {
-      foundFoodItem = true;
-    }
+        foundFoodItem = true;
+      }
+    });
   });
-});
-return foundFoodItem;
+  return foundFoodItem;
 }
 
 function duplicateNumbers(arr1, arr2) {
