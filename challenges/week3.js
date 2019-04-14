@@ -53,6 +53,16 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
+  let foundFoodItem = false;
+
+  menu.forEach(function(menuItem) {
+    menuItem.ingredient.forEach(function(menuItemIngredient) {
+      if (menuItemIngredient === ingredient) {
+      foundFoodItem = true;
+    }
+  });
+});
+return foundFoodItem;
 }
 
 function duplicateNumbers(arr1, arr2) {
