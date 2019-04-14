@@ -36,6 +36,14 @@ function getSquares(nums) {
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
   // Your code here!
+return words.split('').map(function(word,index){
+//If it is the first word make it lowercase
+if(index === 0) {
+  return words.toLowerCase();
+}
+//If it is not the first word only uppercase the first letter
+return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+ }).join('');
 }
 
 function getTotalSubjects(people) {
@@ -69,6 +77,7 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
+
 }
 
 module.exports = {
