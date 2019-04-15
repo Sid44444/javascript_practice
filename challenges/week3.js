@@ -77,7 +77,19 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
+const duplicates = [];
 
+  arr1.forEach(function(num) {
+    arr2.forEach(function (num2) {
+      if (num === num2) {
+        const duplicatesContainsNum = duplicates.includes(num);
+        if(duplicatesContainsNum === false) {
+          duplicates.push(num2);
+        }
+      }
+    });
+  });
+return duplicates;
 }
 
 module.exports = {
