@@ -12,11 +12,11 @@ function findSmallNums(nums) {
     const num = nums[i];
     const small = Math.sign(num);
     smallNums.push(small) ;
-    return small;
+  
     //return small;
   }
   //return the array of small numbers
-  
+  //return small;
 }
 
 function findNamesBeginningWith(names, char) {
@@ -28,7 +28,26 @@ function findNamesBeginningWith(names, char) {
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
   // Your code here
-}
+    [
+ 
+    ]
+    const verbs = [];
+  
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      
+      //slice off the first 3 chars of each word
+      const first3Chars = word.slice(0, 3);
+      // are they equal to "to "?
+      if (first3Chars === "to") {
+        verbs.push(word);
+      }
+      //if so push to new array to collect the verbs
+    }
+    //return the new array
+    return verbs;
+  }
+     
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");

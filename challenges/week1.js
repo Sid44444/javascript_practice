@@ -2,29 +2,21 @@ function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
   return word[0].toUpperCase() + word.slice(1);
-  //from Stackoverflow
 }
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
-  // each parameter to be treated the same
-  //Upper case in position 0
   return firstName[0].toUpperCase() + '.' + lastName[0].toUpperCase();
 }
-
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
   return (originalPrice / 100 * vatRate) + originalPrice;
-
-
 }
-
-
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
@@ -36,7 +28,6 @@ function getSalePrice(originalPrice, reduction) {
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   // Add your code here!
-
   var middleC = "";
 
   if (str.length % 2 === 0) {
@@ -50,8 +41,6 @@ function getMiddleCharacter(str) {
   return middleC;
 
 }
-
-
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
@@ -110,9 +99,6 @@ function getMeanScore(scores) {
   return Math.round(100 * (sum / scores.length)) / 100;
   //I watched a video on this that explained it brilliantly 
   //(https://www.youtube.com/watch?v=uibEcNmGCi8)
-  //The rounding numbers down to 2 decimal places caused me problems.
-  //I used .toFixed(2) but this converted my number to a string
-  // causing both tests to fail. 
 }
 
 function simpleFizzBuzz(n) {
