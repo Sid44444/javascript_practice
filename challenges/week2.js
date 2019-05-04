@@ -15,52 +15,57 @@ function isFromManchester(person) {
     return false;
   }
 }
-  
+
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
   // Your code here!
-  const num = (people/40);
-  const roundedNum =Math.ceil(num);
-  return roundedNum;
+  return Math.ceil(people / 40);
 }
 
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
   // Your code here!
-  const sheepOnly = arr.filter(function(item) {
+  const sheepOnly = arr.filter(function (item) {
     if (item === "sheep") {
       return true;
     } else {
       return false;
-    } 
-  }) 
+    }
+  })
   return sheepOnly.length
 
 }
-  
+
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
-if (person === 'Manchester') {
-    return true;
-} if (person !== 'Manchester') {
-    return false;
-} 
-let postCodeFirst =(person('postCode'.charAt(0))); 
+  const firstLetter = person.address.postCode[0];
+  return firstLetter === "M" && person.address.city === "Manchester"
+}
+  // if (person === 'Manchester') {
+  //   return true;
+  // } if (person !== 'Manchester') {
+  //   return false;
+  // }
+  // let postCodeFirst = (person('postCode'.charAt(0)));
 
- if (postCodeFirst === 'M') { 
-  return true;
-} if (postCodeFirst !== 'M') {
-  return false;
-}
-}
-  //const cityFinder=person.city
-  //if person:city='Manchester' {
-   // return true;
+  // if (postCodeFirst === 'M') {
+  //   return true;
+  // } if (postCodeFirst !== 'M') {
+  //   return false;
+  // }if (postCodeFirst === 'M' && person !== 'Manchester') {
+  //     return false;
+  //   }
+  //   let postCodeSecond = (person('postCode'.char)
+  // }
+
+//const cityFinder=person.city
+//if person:city='Manchester' {
+// return true;
 //}// else {
-  //return false;
-  
+//return false;
+
 
 
 module.exports = {
