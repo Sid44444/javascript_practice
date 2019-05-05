@@ -12,11 +12,27 @@ function findSmallNums(nums) {
 }
 
 
+
+  //const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
+
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
   // Your code here
+  let beginWith = [];
+  //new array to put first character into
+  for (let i = 0; i < names.length; i++) {
+    let name = names[i];
+
+    if (name.charAt(0)) {
+      beginWith.push(names.char[i]);
+      
+    }
+  }
+  return beginWith(names,"D");
+  //console.log(beginWith)
 }
+
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
