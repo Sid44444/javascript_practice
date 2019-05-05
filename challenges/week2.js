@@ -33,7 +33,6 @@ function countSheep(arr) {
     }
   })
   return sheepOnly.length
-
 }
 
 
@@ -41,30 +40,10 @@ function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
   const firstLetter = person.address.postCode[0];
-  return firstLetter === "M" && person.address.city === "Manchester"
+  const secondLetter = person.address.postCode[1];
+const isAlphabeticCharacter = isNaN(Number(secondLetter))
+  return firstLetter === "M" && !isAlphabeticCharacter;
 }
-  // if (person === 'Manchester') {
-  //   return true;
-  // } if (person !== 'Manchester') {
-  //   return false;
-  // }
-  // let postCodeFirst = (person('postCode'.charAt(0)));
-
-  // if (postCodeFirst === 'M') {
-  //   return true;
-  // } if (postCodeFirst !== 'M') {
-  //   return false;
-  // }if (postCodeFirst === 'M' && person !== 'Manchester') {
-  //     return false;
-  //   }
-  //   let postCodeSecond = (person('postCode'.char)
-  // }
-
-//const cityFinder=person.city
-//if person:city='Manchester' {
-// return true;
-//}// else {
-//return false;
 
 
 
