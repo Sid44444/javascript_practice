@@ -1,23 +1,16 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
-  
-  //check each element in an array
-  //if element is a minus number or a decimal number under 1 create a new array with those numbers.
-  //if array is empty return empty
-  //if no negative numbers or <1 numbers return an empty array.
-  const smallNums=[];
-  
+
+  let smallNums = [ ];
   for (let i = 0; i < nums.length; i++) {
-    const num = nums[i];
-    const small = Math.sign(num);
-    smallNums.push(small) ;
-  
-    //return small;
-  }
-  //return the array of small numbers
-  //return small;
+    if (nums[i] < 1) {
+      smallNums.push(nums[i]);
+    }
+   }
+ return smallNums;
+//  console.log(smallNums);
 }
+
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
