@@ -52,11 +52,25 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
+  const onlyIntegers = [];
+  //new array in which to put only integers in
+  //sort through array using a for loop
+  //push only integers into new array
+  //console log onlyIntegers array to check it works in Repl.it
+
+  return onlyIntegers;
 }
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
   // Your code here
+  let citiesDisName = [];
+  //new array to push cities display name
+  //sort through array using a for loop
+  //push cities dis name into array
+  //console.log this array to check it works in repl.it
+
+  return citiesDisName;
 }
 
 function getSquareRoots(nums) {
