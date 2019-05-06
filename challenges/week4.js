@@ -76,17 +76,33 @@ function getCities(users) {
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
+  let squareRoot = [];
+  //for loop used to go through each element 
+  //action on each element should be to find square root of that number
+  //if an integer * by itself = the number in the array
+  //then that original integer is the squared root of the number in the array
+
+
+  return squareRoot;
 }
 
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
+let sentenceContaining = [];
+  //returns a sentence containing specified str in new array
+  //Not to be case sensitive but needs to return a whole sentence
+  //. or capital letter
+  return sentenceContaining;
 }
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   // Your code here
+  let longestSides = [];
+
+  return longestSides;
 }
 
 module.exports = {
