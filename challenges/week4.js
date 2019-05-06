@@ -1,35 +1,34 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
 
-  let smallNums = [ ];
+  let smallNums = [];
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] < 1) {
       smallNums.push(nums[i]);
     }
-   }
- return smallNums;
-//  console.log(smallNums);
+  }
+  return smallNums;
+  //  console.log(smallNums);
 }
 
 
 
-  //const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
+//const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
   let beginWith = [];
   //new array to put first character into
   for (let i = 0; i < names.length; i++) {
     let name = names[i];
-
-    if (name.charAt(0)) {
+    let firstChar = name.charAt(0)
+    if (firstChar === char) {
       beginWith.push(names.char[i]);
-      
+
     }
   }
-  return beginWith(names,"D");
+  return beginWith(names, char);
   //console.log(beginWith)
 }
 
@@ -37,18 +36,18 @@ function findNamesBeginningWith(names, char) {
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
 
-    const verbs = [];
-  
-    for (let i = 0; i < words.length; i++) {
-      const word = words[i];
-      const first3Chars = word.slice(0, 3);
-      if (first3Chars === "to") {
-        verbs.push(word);
-      }
+  const verbs = [];
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    const first3Chars = word.slice(0, 3);
+    if (first3Chars === "to ") {
+      verbs.push(word);
     }
-    return verbs;
   }
-     
+  return verbs;
+}
+
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
