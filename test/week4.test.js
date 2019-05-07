@@ -64,6 +64,7 @@ describe("getIntegers", () => {
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
     expect(getIntegers([])).toEqual([]);
     expect(getIntegers([4.9, 9.33, 12.4])).toEqual([]);
+    
   });
 });
 

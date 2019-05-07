@@ -52,14 +52,19 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
-  const onlyIntegers = [];
-  //new array in which to put only integers in
-  //sort through array using a for loop
-  //push only integers into new array
-  //console log onlyIntegers array to check it works in Repl.it
-
-  return onlyIntegers;
+  // const onlyIntegers = [];
+  // const numArr = nums[i];
+  // for (let i = 0; i < words.length; i++) {
+  //   if (numArr === Math.round(nums) {
+  //     onlyIntegers.push(numArr);
+  //   }
+  // }
+  // return onlyIntegers;
 }
+//new array in which to put only integers in
+//sort through array using a for loop
+//push only integers into new array
+//console log onlyIntegers array to check it works in Repl.it
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
@@ -90,7 +95,7 @@ function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
-let sentenceContaining = [];
+  let sentenceContaining = [];
   //returns a sentence containing specified str in new array
   //Not to be case sensitive but needs to return a whole sentence
   //. or capital letter
