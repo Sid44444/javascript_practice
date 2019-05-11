@@ -104,6 +104,10 @@ function findSentencesContaining(sentences, str) {
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   // Your code here
+  //search through an array and each array within that array
+  // the three numbers in the arrays need to be sorted into highest number first
+  //this number then needs to be returned
+  //if two numbers have the highest value only one of these should be returned
   let longestSides = [];
 
   return longestSides;
