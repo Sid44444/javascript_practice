@@ -12,25 +12,29 @@ function findSmallNums(nums) {
 }
 
 
-
-//const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
-
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  let beginWith = [];
+  const beginWith = [];
   //new array to put first character into
   for (let i = 0; i < names.length; i++) {
-    let name = names[i];
-    let firstChar = name.charAt(0)
-    if (firstChar === char) {
-      beginWith.push(names.char[i]);
 
-    }
-  }
-  return beginWith(names, char);
-  //console.log(beginWith)
+    const name = names[i];
+    // if (names[0] === char) beginWith.push(names[i]);
+    if (name.charAt(0) === char)
+      beginWith.push(names[i]);
+
+
+  } return beginWith;
+
+  //  console.log([findNamesBeginningWith]); 
 }
+
+
+
+
+//  findNamesBeginningWith(["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"], 'R')
+
 
 
 function findVerbs(words) {
@@ -52,16 +56,16 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
-    const onlyIntegers = [];
+  const onlyIntegers = [];
 
-    for (let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
 
-    const numArr = nums[i];{
-    if(numArr.Math.round(onlyIntegers));
-   }
-}
+    const numArr = nums[i]; {
+      if (numArr.Math.round(onlyIntegers));
+    }
+  }
   //  return onlyIntegers(numArr);
- }
+}
 //push only integers into new array
 //console log onlyIntegers array to check it works in Repl.it
 
