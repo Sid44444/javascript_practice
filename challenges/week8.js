@@ -13,39 +13,32 @@ const findNextNumber = (nums, n) => {
 
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
-  // search string for 0's (not an array)
-  //count how many 0's
-  //search string for 1's
-  //count how many 1's
-  //return 1: (and count of 1's),
-  //return 0: (and count of 0's)
 
   let ones = 0;
   let zeroes = 0;
-  
+
   for (let i = 0; i < str.length; i++) {
     let char = str[i];
-    // console.log(char);
     if (char === "1") {
       ones++;
     } else if (char === "0") {
       zeroes++;
     }
-    }
+  }
   return {
     1: ones,
     0: zeroes
   }
-  // console.log(ones, zeroes);
-  };
-  
+};
+
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
   //reverse digits in a number (not in an array)
   //if number = 100 return 1 as no need to return 001
+  let reversedNumber= n.toString().split('').reverse().join('');
+  return parseInt(reversedNumber);
 };
 
 const sumArrays = arrs => {
