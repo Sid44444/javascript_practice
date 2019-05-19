@@ -56,16 +56,15 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
+
   const onlyIntegers = [];
 
   for (let i = 0; i < nums.length; i++) {
-      const numArr = nums[i]; {
-      if (numArr.Math.round(onlyIntegers)) {
-        onlyIntegers.push(numArr);
+      if (Number.isInteger(nums[i])); {
+        onlyIntegers.push(nums[i]);
       }
-    }
   }
-  //  return onlyIntegers(numArr);
+    return onlyIntegers(nums);
 }
 //push only integers into new array
 //console log onlyIntegers array to check it works in Repl.it
