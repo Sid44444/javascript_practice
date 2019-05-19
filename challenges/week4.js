@@ -59,9 +59,10 @@ function getIntegers(nums) {
   const onlyIntegers = [];
 
   for (let i = 0; i < nums.length; i++) {
-
-    const numArr = nums[i]; {
-      if (numArr.Math.round(onlyIntegers));
+      const numArr = nums[i]; {
+      if (numArr.Math.round(onlyIntegers)) {
+        onlyIntegers.push(numArr);
+      }
     }
   }
   //  return onlyIntegers(numArr);

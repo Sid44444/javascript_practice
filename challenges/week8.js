@@ -21,7 +21,25 @@ const count1sand0s = str => {
   //return 1: (and count of 1's),
   //return 0: (and count of 0's)
 
-};
+  let ones = 0;
+  let zeroes = 0;
+  
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    // console.log(char);
+    if (char === "1") {
+      ones++;
+    } else if (char === "0") {
+      zeroes++;
+    }
+    }
+  return {
+    1: ones,
+    0: zeroes
+  }
+  // console.log(ones, zeroes);
+  };
+  
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
