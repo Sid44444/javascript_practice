@@ -8,6 +8,10 @@ const findNextNumber = (nums, n) => {
   //if number found more than once only return 
   //next index number of first number found. 'break'?
   //if at final index return 'null'
+  // const nextNumber = integer
+
+
+  // return nextNumber
 
 };
 

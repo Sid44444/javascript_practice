@@ -57,14 +57,19 @@ function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here
 
-  const onlyIntegers = [];
+  let onlyIntegers = [];
 
   for (let i = 0; i < nums.length; i++) {
-      if (Number.isInteger(nums[i])); {
-        onlyIntegers.push(nums[i]);
+    //go through each number
+    const num = nums[i];
+    //num =nums[i]
+      if (Number.isInteger(num)) {
+        //if num is a whole number put it in onlyIntegers array
+        onlyIntegers.push(num);
       }
   }
-    return onlyIntegers(nums);
+    return onlyIntegers;
+    //return the new array with just integers in.
 }
 //push only integers into new array
 //console log onlyIntegers array to check it works in Repl.it
@@ -74,6 +79,13 @@ function getCities(users) {
   // Your code here
   let citiesDisName = [];
   //new array to push cities display name
+  for (let i = 0; i < users.length; i++) {
+    //go through each user
+    //displayName:
+    const user = users[i];//just neater to have user rather than users[i]
+    const city = user.data.city.displayName;// retrieve info from object
+    citiesDisName.push(city);
+  }
   //sort through array using a for loop
   //push cities dis name into array
   //console.log this array to check it works in repl.it
@@ -86,11 +98,15 @@ function getSquareRoots(nums) {
   // Your code here
   let squareRoot = [];
   //for loop used to go through each element 
+  for (let i = 0; i < nums.length; i++) {
   //action on each element should be to find square root of that number
+  const num = nums[i];
+  const square = num.Math.sqrt ();
+  squareRoot.push(square);
   //if an integer * by itself = the number in the array
   //then that original integer is the squared root of the number in the array
 
-
+  }
   return squareRoot;
 }
 
