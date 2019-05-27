@@ -95,27 +95,33 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
-  let squareRoot = [];
+  const squareRoots = [];
   //for loop used to go through each element 
   for (let i = 0; i < nums.length; i++) {
   //action on each element should be to find square root of that number
   const num = nums[i];
-  const square = num.Math.sqrt ();
-  squareRoot.push(square);
+  const square = (Math.sqrt(num));
+  const twoDec = Number(square.toFixed(2));
+  // const squareFound = square.toFixed(2);
+  squareRoots.push(twoDec);
+  // const squareRoot=parseFloat(square);
   //if an integer * by itself = the number in the array
   //then that original integer is the squared root of the number in the array
-
   }
-  return squareRoot;
+  return squareRoots;
 }
 
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
-  let sentenceContaining = [];
+  let sentenceContaining = [''];
   //returns a sentence containing specified str in new array
+  //  for (let i = 0; i < sentences.length; i++) {
+  //    const word = sentences[i];
+  //    const 
+
+  //  }
   //Not to be case sensitive but needs to return a whole sentence
   //. or capital letter
   return sentenceContaining;
