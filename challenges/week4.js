@@ -42,13 +42,19 @@ function findVerbs(words) {
 
   const verbs = [];
 
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
+  words.forEach(function (word) {
     const first3Chars = word.slice(0, 3);
     if (first3Chars === "to ") {
       verbs.push(word);
     }
-  }
+  });
+  //   for (let i = 0; i < words.length; i++) {
+  //     const word = words[i];
+  //     const first3Chars = word.slice(0, 3);
+  //     if (first3Chars === "to ") {
+  //       verbs.push(word);
+  //     }
+  //   }
   return verbs;
 }
 
@@ -79,13 +85,19 @@ function getCities(users) {
   // Your code here
   let citiesDisName = [];
   //new array to push cities display name
-  for (let i = 0; i < users.length; i++) {
-    //go through each user
-    //displayName:
-    const user = users[i];//just neater to have user rather than users[i]
+  users.forEach(function (user) {
     const city = user.data.city.displayName;// retrieve info from object
     citiesDisName.push(city);
-  }
+  });
+
+
+  // for (let i = 0; i < users.length; i++) {
+  //   //go through each user
+  //   //displayName:
+  //   const user = users[i];//just neater to have user rather than users[i]
+  //   const city = user.data.city.displayName;// retrieve info from object
+  //   citiesDisName.push(city);
+  // }
   //sort through array using a for loop
   //push cities dis name into array
   //console.log this array to check it works in repl.it
@@ -112,22 +124,18 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
   const sentenceContainingStr = [];
-  //new array to put the sentence, in which the string belongs, in.
   for (let i = 0; i < sentences.length; i++) {
-    //for loop
     const sentence = sentences[i];
-    //as per training sentence is easier to return than sentences[i]
-    const sentenceLowerCase = sentence.toLowerCase(); 
-      //sentenceLowCase is now all lower case
-      if (sentenceLowerCase.indexOf(str.toLowerCase()) >=0) { 
-        //as per Stackoverflow. indexOf finds the first occurance of a specified value of a string
-        sentenceContainingStr.push(sentence);
-        //lowercase sentence needs to be searched for str. If it is not there do nothing
-        //If it is there push whole sentence (including str)into sentenceContaining
-        // sentenceContaining.push(sentenceLowCase);
-      } //should not be case sensitive!! (why is this not working as I have changed things to Lower Case?)
+    const sentenceLowerCase = sentence.toLowerCase();
+    //sentenceLowCase is now all lower case
+    if (sentenceLowerCase.indexOf(str.toLowerCase()) >= 0) {
+      //as per Stackoverflow. indexOf finds the first occurance of a specified value of a string
+      sentenceContainingStr.push(sentence);
+      //lowercase sentence needs to be searched for str. If it is not there do nothing
+      //If it is there push whole sentence (including str)into sentenceContaining
+      // sentenceContaining.push(sentenceLowCase);
+    } //should not be case sensitive!! (why is this not working as I have changed things to Lower Case?)
     return sentenceContainingStr;
   }
 }
