@@ -145,12 +145,23 @@ function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   // Your code here
   const longestSides = [];
-  for (let i = 0; i < triangles.length; i++) {
-    const biggestNum = triangles[i];
-    longestSides.push(Math.max(...biggestNum));
-  }
+
+  triangles.forEach(function (triangle) {
+    triangle.sort(function (a, b) {
+      return b - a;
+    });
+    const largestSide = triangle[0];
+    longestSides.push(largestSide);
+  });
   return longestSides;
 }
+
+//   for (let i = 0; i < triangles.length; i++) {
+//     const biggestNum = triangles[i];
+//     longestSides.push(Math.max(...biggestNum));
+//   }
+//   return longestSides;
+// }
 
 module.exports = {
   findSmallNums,
