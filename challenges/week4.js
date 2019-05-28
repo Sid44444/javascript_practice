@@ -2,13 +2,13 @@ function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
 
   let smallNums = [];
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] < 1) {
-      smallNums.push(nums[i]);
+
+  nums.forEach(function (num) {
+    if (num < 1) {
+      smallNums.push(num);
     }
-  }
+  });
   return smallNums;
-  //  console.log(smallNums);
 }
 
 
@@ -48,13 +48,6 @@ function findVerbs(words) {
       verbs.push(word);
     }
   });
-  //   for (let i = 0; i < words.length; i++) {
-  //     const word = words[i];
-  //     const first3Chars = word.slice(0, 3);
-  //     if (first3Chars === "to ") {
-  //       verbs.push(word);
-  //     }
-  //   }
   return verbs;
 }
 
@@ -65,20 +58,15 @@ function getIntegers(nums) {
 
   let onlyIntegers = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    //go through each number
-    const num = nums[i];
-    //num =nums[i]
+  nums.forEach(function (num) {
     if (Number.isInteger(num)) {
       //if num is a whole number put it in onlyIntegers array
       onlyIntegers.push(num);
     }
-  }
+  });
   return onlyIntegers;
-  //return the new array with just integers in.
 }
-//push only integers into new array
-//console log onlyIntegers array to check it works in Repl.it
+
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
