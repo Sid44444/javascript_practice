@@ -63,13 +63,13 @@ function getIntegers(nums) {
     //go through each number
     const num = nums[i];
     //num =nums[i]
-      if (Number.isInteger(num)) {
-        //if num is a whole number put it in onlyIntegers array
-        onlyIntegers.push(num);
-      }
+    if (Number.isInteger(num)) {
+      //if num is a whole number put it in onlyIntegers array
+      onlyIntegers.push(num);
+    }
   }
-    return onlyIntegers;
-    //return the new array with just integers in.
+  return onlyIntegers;
+  //return the new array with just integers in.
 }
 //push only integers into new array
 //console log onlyIntegers array to check it works in Repl.it
@@ -98,15 +98,13 @@ function getSquareRoots(nums) {
   const squareRoots = [];
   //for loop used to go through each element 
   for (let i = 0; i < nums.length; i++) {
-  //action on each element should be to find square root of that number
-  const num = nums[i];
-  const square = (Math.sqrt(num));
-  const twoDec = Number(square.toFixed(2));
-  // const squareFound = square.toFixed(2);
-  squareRoots.push(twoDec);
-  // const squareRoot=parseFloat(square);
-  //if an integer * by itself = the number in the array
-  //then that original integer is the squared root of the number in the array
+    //action on each element should be to find square root of that number
+    const num = nums[i];
+    const square = (Math.sqrt(num));
+    const twoDec = Number(square.toFixed(2));// changed string to number by using Number here
+    // const squareFound = square.toFixed(2);
+    squareRoots.push(twoDec);
+    //then that original integer is the squared root of the number in the array
   }
   return squareRoots;
 }
@@ -115,27 +113,34 @@ function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
-  let sentenceContaining = [''];
-  //returns a sentence containing specified str in new array
-  //  for (let i = 0; i < sentences.length; i++) {
-  //    const word = sentences[i];
-  //    const 
-
-  //  }
-  //Not to be case sensitive but needs to return a whole sentence
-  //. or capital letter
-  return sentenceContaining;
+  const sentenceContainingStr = [];
+  //new array to put the sentence, in which the string belongs, in.
+  for (let i = 0; i < sentences.length; i++) {
+    //for loop
+    const sentence = sentences[i];
+    //as per training sentence is easier to return than sentences[i]
+    const sentenceLowerCase = sentence.toLowerCase(); 
+      //sentenceLowCase is now all lower case
+      if (sentenceLowerCase.indexOf(str.toLowerCase()) >=0) { 
+        //as per Stackoverflow. indexOf finds the first occurance of a specified value of a string
+        sentenceContainingStr.push(sentence);
+        //lowercase sentence needs to be searched for str. If it is not there do nothing
+        //If it is there push whole sentence (including str)into sentenceContaining
+        // sentenceContaining.push(sentenceLowCase);
+      } //should not be case sensitive!! (why is this not working as I have changed things to Lower Case?)
+    return sentenceContainingStr;
+  }
 }
+
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   // Your code here
-  //search through an array and each array within that array
-  // the three numbers in the arrays need to be sorted into highest number first
-  //this number then needs to be returned
-  //if two numbers have the highest value only one of these should be returned
-  let longestSides = [];
-
+  const longestSides = [];
+  for (let i = 0; i < triangles.length; i++) {
+    const biggestNum = triangles[i];
+    longestSides.push(Math.max(...biggestNum));
+  }
   return longestSides;
 }
 
