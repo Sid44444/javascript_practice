@@ -15,20 +15,16 @@ function findSmallNums(nums) {
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
+
   const beginWith = [];
-  //new array to put first character into
-  for (let i = 0; i < names.length; i++) {
 
-    const name = names[i];
-    // if (names[0] === char) beginWith.push(names[i]);
-    if (name.charAt(0) === char)
-      beginWith.push(names[i]);
-
-
-  } return beginWith;
-
-  //  console.log([findNamesBeginningWith]); 
+  names.forEach(function (name) {
+    if (name[0] === char)
+      beginWith.push(name);
+  });
+  return beginWith;
 }
+
 
 
 
