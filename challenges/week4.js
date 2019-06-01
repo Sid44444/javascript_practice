@@ -108,21 +108,18 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
+
+
   const sentenceContainingStr = [];
-  for (let i = 0; i < sentences.length; i++) {
-    const sentence = sentences[i];
-    const sentenceLowerCase = sentence.toLowerCase();
-    //sentenceLowCase is now all lower case
-    if (sentenceLowerCase.indexOf(str.toLowerCase()) >= 0) {
-      //as per Stackoverflow. indexOf finds the first occurance of a specified value of a string
-      sentenceContainingStr.push(sentence);
-      //lowercase sentence needs to be searched for str. If it is not there do nothing
-      //If it is there push whole sentence (including str)into sentenceContaining
-      // sentenceContaining.push(sentenceLowCase);
-    } //should not be case sensitive!! (why is this not working as I have changed things to Lower Case?)
+ sentences.forEach( function(sentence) {
+      if (sentence.toLowerCase().includes(str.toLowerCase())
+      ) {
+        sentenceContainingStr.push(sentence)
+    }
+  })
     return sentenceContainingStr;
   }
-}
+
 
 
 function getLongestSides(triangles) {
