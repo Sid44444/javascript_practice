@@ -91,17 +91,16 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
+
   const squareRoots = [];
-  //for loop used to go through each element 
-  for (let i = 0; i < nums.length; i++) {
-    //action on each element should be to find square root of that number
-    const num = nums[i];
-    const square = (Math.sqrt(num));
-    const twoDec = Number(square.toFixed(2));// changed string to number by using Number here
-    // const squareFound = square.toFixed(2);
+  let squareRootsNum = 0;
+  //forEach used to go through each element 
+  nums.forEach(function (num) {
+    squareRootsNum = (Math.sqrt(num));
+    const twoDec = Number(squareRootsNum.toFixed(2));
     squareRoots.push(twoDec);
-    //then that original integer is the squared root of the number in the array
-  }
+  
+  });
   return squareRoots;
 }
 
@@ -111,14 +110,14 @@ function findSentencesContaining(sentences, str) {
 
 
   const sentenceContainingStr = [];
- sentences.forEach( function(sentence) {
-      if (sentence.toLowerCase().includes(str.toLowerCase())
-      ) {
-        sentenceContainingStr.push(sentence)
+  sentences.forEach(function (sentence) {
+    if (sentence.toLowerCase().includes(str.toLowerCase())
+    ) {
+      sentenceContainingStr.push(sentence)
     }
   })
-    return sentenceContainingStr;
-  }
+  return sentenceContainingStr;
+}
 
 
 
