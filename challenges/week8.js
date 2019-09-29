@@ -2,6 +2,11 @@ const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
   // Your code here!
+  if(nums.includes(n)) 
+  return nums(n.indexOf+1);
+  //  } else {
+  //   return null
+  // };
   // //Search each element in array for a given number
   // let numberIndex = nums.indexOf(n);
   // let nextIndex = numberIndex + 1;
