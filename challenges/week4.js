@@ -1,4 +1,5 @@
 function findSmallNums(nums) {
+  //filter to be used next
   if (!nums) throw new Error("nums is required");
 
   let smallNums = [];
@@ -13,6 +14,7 @@ function findSmallNums(nums) {
 
 
 function findNamesBeginningWith(names, char) {
+  //filter to be used next
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
 
@@ -34,6 +36,7 @@ function findNamesBeginningWith(names, char) {
 
 
 function findVerbs(words) {
+  //filter to be used next
   if (!words) throw new Error("words is required");
 
   const verbs = [];
@@ -49,6 +52,7 @@ function findVerbs(words) {
 
 
 function getIntegers(nums) {
+  //filter to be used
   if (!nums) throw new Error("nums is required");
   // Your code here
 
@@ -65,6 +69,7 @@ function getIntegers(nums) {
 
 
 function getCities(users) {
+  //map tobe used next
   if (!users) throw new Error("users is required");
   // Your code here
   let citiesDisName = [];
